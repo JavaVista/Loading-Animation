@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#container{
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+.loading{
+    border: 6px solid #E0F2F1;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border-top-color: #1DE9B6;
+    border-left-color: #1DE9B6;
+    animation: spin 2s infinite ease-in-out; /* You can change the animation duration time by adding .#s or slow by #s */
+}
+@keyframes spin{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(1440deg); /*  To add multiple animation you can change the rotation between the starting and ending points. Ex. changing to 720 will make it rotate twice before it comes to an end. Multiple by 3 the degrees if you want 3 rotations before the end of the animation (350deg * 3) */
+    }
+}
+
+#load{
+    font: 14px Monaco, Monospace;
+    text-align: center;
+}
